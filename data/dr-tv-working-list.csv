@@ -1,0 +1,87 @@
+name,domain,notes,likely_category,http_status,embed_type,embed_source,verify_notes
+Cana TV Digital,https://canatvdigital.com/,Veron,regional,200,hls,https://stream.hostuis.com:19360/canatvdigital/canatvdigital.m3u8,Direct HLS stream found on page
+Buena TV,https://dominicanchannels.com/buena-tv/,Santo Domingo Este,national-news,200,hls,https://edge.essastream.com/buenatv/index.m3u8,Direct HLS stream found on page
+CariVisión,http://carivision.online/,Santo Domingo news/sports,national-news,200,youtube,youtube.com/channel/UCGo5FjcYI5fZszhfBUfcCgQ,YouTube reference found on page
+CDN Canal 37,https://cdn.com.do/,Confirmed YouTube Live - major news network,national-news,200,youtube,youtube.com/channel/UCpFfLf9o4wJr-yr7dG8gYug,Manually confirmed via YouTube search - official CDN channel
+Canal del Sol,https://canaldelsol.com/,Santo Domingo entertainment/news,entertainment,200,hls,https://stream.canaldelsol.com/sol26/master.m3u8,Direct HLS stream found on page
+Bonao TV Canal 12,https://www.bonaotv.com,Bonao Monseñor Nouel,regional,200,hls,https://tele-stream.telecasa.net/live/st2/bonaotv-hd/index.m3u8,Direct HLS stream found on page
+Boreal Televisión,https://borealtelevision.com/,Production company,entertainment,200,youtube,youtube.com/c/BOREALTELEVISI,YouTube reference found on page
+Acento TV,https://acentotv.acento.com.do/,News/current affairs,national-news,200,youtube,youtube.com/channel/UCxkjxuQjnsIBWErZ1tmQa3A,YouTube reference found on page
+CDN Deportes,https://cdndeportes.com.do/,CDN sports sister channel,sports,200,youtube,youtube.com/channel/UCDVgwGy7AbR9me7MJHpJ0zA,Manually confirmed via search - official 24h sports channel YouTube - FILLS THE DEPORTES GAP
+De Último Minuto TV,https://deultimominuto.net/de-ultimo-minuto-television/,Alofoke Media Group,entertainment,200,youtube,youtube.com/channel/UCyqn5zX5zoiD9VEKd6UvZrA,YouTube reference found on page
+Bebeto HD,https://bebetohd.com/,General entertainment,entertainment,200,youtube,youtube.com/@bebetotv1,YouTube reference found on page
+Antena Canal 7,https://www.antena7.com.do/,National entertainment/info,national-news,200,youtube,youtube.com/@antena7oficial,Manually confirmed via search - official YouTube channel
+Bajo Techo TV,https://bajotecho.tv/,Real estate niche,entertainment,200,hls,https://cdnfox.hostlagarto.com/bajotechotv/index.m3u8,Direct HLS stream found on page
+Color Visión,https://colorvision.com.do/,Confirmed YouTube Live - major network (Canal 9),national-news,200,youtube,youtube.com/channel/UCiDATmLMS6XfkB7mh8pmeHg,YouTube reference found on page
+HMTV Canal 33,http://hmtv.com.do/,Hermanas Mirabal,regional,200,iframe,https://fox.hostlagarto.com/VideoPlayer/hmtv?autoplay=1,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Bellavisión Canal 8,https://bellavision8.com/,Higüey,regional,200,iframe,https://fox.hostlagarto.com/VideoPlayer/bellavision8hd?autoplay=1,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Larivisión,https://www.larivision.com/,Barahona,regional,200,hls,https://cloud5.larivision.net/hls/live.m3u8,Direct HLS stream found on page
+CERTV Canal 4,https://rtvdclic.com/rtvd-en-vivo/,State/informative TV,national-news,200,hls,https://protvradiostream.com:1936/canal4rd-1/ngrp:canal4rd-1_all/playlist.m3u8?DVR,Direct HLS stream found on page
+GH Television,https://ghtelevision.com/,Gaspar Hernandez,regional,200,hls,https://cdnfox.hostlagarto.com/ghtelevision/index.m3u8,Direct HLS stream found on page
+Linieros TV,https://tv.linieros.com/,Dajabón border region,regional,200,youtube,youtube.com/@Linierosmedia,YouTube reference found on page
+Fuego TV Canal 40,https://fuego40.com/,Cienfuegos Santiago,regional,200,iframe,https://streamunoapp.com/broadcaster/cromtv/live/player,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Guaymate TV,https://www.vivalivetv.com/channel/guaymate-tv,La Romana,regional,200,iframe,https://www.vivalivetv.com/embed?scheme=embedChannel&channelId=1807&autoplay=yes&showChat=no&theme=stormtrooper,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Digital 15,https://telemicro.com.do/digital-15-en-vivo/,Telemicro sister channel (Univision relay),entertainment,200,iframe,https://telemicro.com.do/players/15tv/index.php,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Ready TV Canal 6,https://readytelevision.com/en-vivo/,La Vega,regional,200,hls,https://streaming.telecablecentral.com.do/ReadyTV/ReadyHD/playlist.m3u8,Direct HLS stream found on page
+Micro Visión,https://microvision.com.do/,Central Cibao region (La Vega/Santiago/Duarte),regional,200,youtube,youtube.com/embed/-G9Ms5p5P4Y,YouTube reference found on page
+Caribbean Traveling Network Dominicano,https://ctn.com.do/,Tourism,entertainment,200,youtube,youtube.com/@CTNDominicano,YouTube reference found on page
+Maimon TV Canal 3,https://maimontv.com,Maimon Bonao,regional,200,hls,https://tele-stream.telecasa.net/live/st3/maimontv-hd/index.m3u8,Direct HLS stream found on page
+Luna TV Canal 25,https://lunatvdigital.com/,Santiago,regional,200,hls,https://stream.lunatv.do/hls/prueba.m3u8,Direct HLS stream found on page
+Supertv 55,https://www.supertv55.tv/,General community TV,entertainment,200,iframe,https://rdomiplayer.com/landing/tv/263/1,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Reportero TV,https://reportero.com.do/,Las Matas de Santa Cruz Montecristi,regional,200,youtube,youtube.com/@Reportero46,YouTube reference found on page
+SimaVisión Canal 18,https://simavision.tv/,Villa Montellano Puerto Plata,regional,200,iframe,https://soportedvb.click/live-stream-video-widget/simavisiontv,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Mega Vision 43,https://www.megavisiontvrd.com/,Santiago,regional,200,youtube,youtube.com/channel/UCchZNa11efTEhE4BOcqhfuw,YouTube reference found on page
+Romana TV Canal 42,https://romanatv42.com/,La Romana,regional,200,hls,https://videoserver.tmcreativos.com:19360/cvmhbyrcat/cvmhbyrcat.m3u8,Direct HLS stream found on page
+Tele Cotuí Canal 10,https://www.telecotuiglobal.com/,Cotui Sanchez Ramirez,regional,200,youtube,youtube.com/embed/99yKmhwybKE,YouTube reference found on page
+Telemicro Canal 5,https://telemicro.com.do/telemicro-en-vivo/,Confirmed YouTube Live - major network,national-news,200,youtube,youtube.com/channel/UCAVnMMAcnwZ67RS6SQtvPOA,Manually confirmed via YouTube search - official Telemicro channel
+Telecentro Canal 13,https://telecentro.com.do/,National varied programming,national-news,200,youtube,youtube.com/channel/UCKd3RqAWndTIflbZGmIoYKw,"Manually confirmed via search - official YouTube channel, part of Grupo Telemicro"
+Telefuturo Canal 23,https://rccnoticias.com.do/rcc-tv/,RCC Noticias,national-news,200,youtube,youtube.com/@RCCMEDIA,YouTube reference found on page
+Tele Radio Norte,https://teleradionorte.com/,News/music/movies,national-news,200,hls,https://angelistic.live:3785/hybrid/play.m3u8,Direct HLS stream found on page
+Tele Dominicana,https://teledominicana.net/,Santo Domingo Este,national-news,200,hls,https://vdopanel.jlahozconsulting.com:3772/multi_live/play_720.m3u8,Direct HLS stream found on page
+Teleantillas,https://teleantillas.com.do/,Major national network,national-news,200,youtube,youtube.com/@teleantillas10,YouTube reference found on page
+Mia Visión Canal 97,https://miavision.tv/,Puerto Plata,regional,200,youtube,youtube.com/@miavisiontv8372,YouTube reference found on page
+Teleradio América,https://teleradioamerica.com/envivo/,TV+radio+internet simulcast,national-news,200,youtube,youtube.com/@canaltrard,YouTube reference found on page
+Teleimpacto,https://teleimpacto52.com.do/,Opinion/current affairs,national-news,200,iframe,https://vpss2003.streamprolive.com/i/cp/html5player.html,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Teleuniverso Canal 29,https://teleuniversotv.com/,National,national-news,200,youtube,youtube.com/@CanalTeleuniverso,YouTube reference found on page
+Teleunión Canal 16,https://teleuniontvrd.com/,Santiago,regional,200,hls,https://68aff552e1684.streamlock.net/teleunion/TU/playlist.m3u8,Direct HLS stream found on page
+R&E Televisión,https://retv.do/en-vivo/,Comendador Elías Piña - has own web+IPTV stream,regional,200,hls,https://cloud2.streaminglivehd.com:1936/8072/8072/playlist.m3u8,Direct HLS stream found on page
+Telenord Canal 8,https://telenord.com.do/index.php?option=com_content&view=featured&Itemid=115,San Francisco de Macoris,regional,200,youtube,youtube.com/channel/UCCfVdftz7iAug_IYreoJgHw,YouTube reference found on page
+Tele Santo Domingo,https://www.telesantodomingo.com/,Channel 42 Exito Vision cable,national-news,200,hls,https://vdopanel.jlahozconsulting.com:3769/live/santodomingolive.m3u8,Direct HLS stream found on page
+Telenord Canal 12,https://telenord.com.do/index.php?option=com_content&view=featured&Itemid=117,Telenord network,national-news,200,youtube,youtube.com/channel/UCCfVdftz7iAug_IYreoJgHw,YouTube reference found on page
+Punta Cana TV,https://puntacanatvrd.com/web/,Punta Cana,regional,200,youtube,youtube.com/@puntacanatv,YouTube reference found on page
+Telesistema Canal 11,https://telesistema11.com.do/,Major national network,national-news,200,youtube,youtube.com/c/telesistema11rd,YouTube reference found on page
+TV Higüey Digital,https://tvhigueydigital.com/,Altagracia/Higüey,regional,200,youtube,youtube.com/channel/UC3elUUXf0hQ6ay_ABawSM7Q,YouTube reference found on page
+Televiaducto,https://www.televiaducto.com.do/,Moca Channel 3,regional,200,youtube,youtube.com/channel/UCuJT7sicnhl0wkw9L4_j92w,YouTube reference found on page
+Televisión Dominicana (USA),https://www.televisiondominicana.tv/,Diaspora channel for US-based Dominicans - relevant to your audience,national-news,200,youtube,youtube.com/@televisiondominicanatv5145,YouTube reference found on page
+TV 10 San Juan,https://tv10sanjuan.com.do/,San Juan de la Maguana,regional,200,hls,https://59d39900ebfb8.streamlock.net:443/tv10sanjuan/tv10sanjuan/playlist.m3u8,Direct HLS stream found on page
+TV Plata,https://tvplata.com/,Puerto Plata,regional,200,iframe,https://rdomiplayer.com/landing/tv/1075/1,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+TVS,https://tvs.com.do/,Tenares Hermanas Mirabal,regional,200,youtube,youtube.com/@tvscanal2295,YouTube reference found on page
+Vallevisión,https://vallevision.com.do/,La Vega/El Cibao,regional,200,youtube,youtube.com/embed/1cO8jTWMj6c,YouTube reference found on page
+Azua TV,https://www.facebook.com/azuatv3,Facebook-only - Azua,regional,,facebook,https://www.facebook.com/azuatv3,"Social-native, no crawlable site"
+Beller Visión Canal 22,http://es-la.facebook.com/people/Beller-Vision-CANAL-22/100028375400328/,Facebook-only - Dajabon,regional,,facebook,http://es-la.facebook.com/people/Beller-Vision-CANAL-22/100028375400328/,"Social-native, no crawlable site"
+Cotuí TV,https://www.facebook.com/cotuitv/,Facebook-only HD 4K - Sanchez Ramirez,regional,,facebook,https://www.facebook.com/cotuitv/,"Social-native, no crawlable site"
+Faro Visión Digital,https://www.facebook.com/farovision/,Facebook-only - Río San Juan,regional,,facebook,https://www.facebook.com/farovision/,"Social-native, no crawlable site"
+Santa Cruz TV 8,https://www.facebook.com/SantaCruzTvCanal8LaMejorImagen/,Facebook-only - El Seibo,regional,,facebook,https://www.facebook.com/SantaCruzTvCanal8LaMejorImagen/,"Social-native, no crawlable site"
+Televida Canal 41,https://es-la.facebook.com/Televida/,Facebook-only Catholic station,christian,,facebook,https://es-la.facebook.com/Televida/,"Social-native, no crawlable site"
+Telenord Canal 10,https://telenord.com.do/index.php?option=com_content&view=category&layout=blog&id=10&Itemid=116,Telenord network,national-news,200,youtube,youtube.com/channel/UCCfVdftz7iAug_IYreoJgHw,YouTube reference found on page
+TVO 39,https://tvo.com.do/,La Romana,regional,200,hls,https://videoserver.tmcreativos.com:19360/gkemzxrrmr/gkemzxrrmr.m3u8,Direct HLS stream found on page
+Visión NDV,https://www.visionndv.net/,Santiago closed-circuit,regional,200,hls,https://soportedvb.click:3891/live/visionndvlive.m3u8,Direct HLS stream found on page
+TV FE,https://www.tvfe.tv/index.html,Christian hymns and messages,christian,200,hls,https://vdopanel.jlahozconsulting.com/p/3662/hybrid/play.m3u8,Direct HLS stream found on page
+Cielo TV,https://cielotv.do/,Christian family programming,christian,200,iframe,https://streaming.servervideo.net/VideoPlayer/cielotv?autoplay=1,"Confirmed via headless browser render - real dedicated live player on own homepage, no X-Frame-Options block, embeds directly (better than YouTube fallback)"
+Aliento Visión TV,https://www.alientovision.com/,Christian station based in New York - diaspora relevant,christian,200,youtube,youtube.com/embed/3xsTI98NSKw,YouTube reference found on page
+Acontecer del Cibao TV,https://www.acontecerdelcibao.com/p/tv.html,Cibao region digital outlet,regional,200,hls,https://gplayer.hiesoft.net/player.php?url=https://stream.hiesoft.net/memfs/a625d423-134a-47c2-b4d6-93c4dfdae4d4_output_0.m3u8?session=ev5Xh7sYqgNUYun5PqnQSi,Direct HLS stream found on page
+ZTV Digital,https://z101digital.com/ztv/,Z101 radio's TV arm,entertainment,200,youtube,youtube.com/embed/strhKu8XiI8,YouTube reference found on page
+TV Ola 44 HD,https://teleola44hd.com/,Eastern region UHF,regional,200,youtube,youtube.com/channel/UC-vonuM13POcYWAQx70OAIQ,YouTube reference found on page
+Hilando Fino TV,https://www.hilandofinotv.com/,General family programming,entertainment,200,youtube,youtube.com/channel/UCUPkqvKKBbtkuGKAVjW0uyw,YouTube reference found on page
+Canalda HD,https://canaldahd.com/,National news/music/entertainment,entertainment,200,iframe,https://canalda.rgradio.net/hybrid-stream-video-widget/canalda,"Confirmed via headless browser render - real iframe player found on own site, no X-Frame-Options block"
+Baní Visión,https://www.banivision.com/,Diaspora station HQ Orlando FL rooted in Baní - relevant to your US diaspora audience,national-news,200,youtube,youtube.com/@Banivision,YouTube reference found on page
+Digital 809 TV,https://digital809tv.com,Music video channel,entertainment,200,hls,https://stream.inliveserver.com:19360/8146/8146.m3u8,Direct HLS stream found on page
+Valle Nuevo TV,https://vallenuevotv.com/,Constanza La Vega,regional,200,youtube,youtube.com/@ValleNuevoTV,YouTube reference found on page
+EL Sol Network TV,https://elsolnetworktv.com/,Entertainment news,entertainment,200,youtube,youtube.com/embed/PCAxivrM4vIu0026t,YouTube reference found on page
+TNI Canal 51,https://tni51.com/,Community/radio+TV circuit,regional,200,youtube,youtu.be/0yyFduNDg4U,YouTube reference found on page
+Camú TV,https://www.camutv.net/,La Vega online TV,regional,200,hls,https://tv.ycrnet.uk/camutv.m3u8,Direct HLS stream found on page
+Yuna Visión,https://www.yunavision.com/,Monseñor Nouel,regional,200,hls,https://tele-stream.telecasa.net/live/st1/yunavision-hd/index.m3u8,Direct HLS stream found on page
+Visión Global TV,https://visionglobaltv.net/,Varied: sports/humor/movies/music,entertainment,200,hls,https://vdopanel.jlahozconsulting.com:3407/hybrid/play.m3u8,Direct HLS stream found on page
+La Voz de María,https://lavozdemaria.org/,Catholic music station La Vega,christian,200,hls,https://live.lavozdemaria.com:3436/live/lavozdemarialive.m3u8,Direct HLS stream found on page
+Máquina Visión,https://makinavision.net/,La Romana online TV,regional,200,hls,https://vdopanel.jlahozconsulting.com:3303/hybrid/play.m3u8,Direct HLS stream found on page
+Tenarenses TV,https://www.tenarenses.com/tv-en-vivo/,Tenares digital TV,regional,200,youtube,youtube.com/@tenarensestv,YouTube reference found on page

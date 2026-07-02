@@ -1,0 +1,13 @@
+name,domain,notes,likely_category,http_status,embed_type,embed_source,verify_notes
+Caribbean Landscape Channel,https://tdn.do/Canales/canal2/canal2.html,Lifestyle/leisure,entertainment,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+Elías Piña TV,https://eliaspinatv.net,Elías Piña,regional,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+Delta TV Canal 50,https://www.deltatv50.com/,General,entertainment,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+Galaxia Teve Canal 42,https://galaxiateve.net/,Santiago,regional,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+Ciber Visión Canal 3,https://tdn.do/Canales/canal3/canal3.html,Nagua,regional,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+Peravia Visión,https://peraviavision.tv/,Peravia,regional,200,iframe_pending_check,https://ss2.tvrdomi.com:2020/VideoPlayer/peraviavision?autoplay=1,Iframe found via headless render (loaded successfully in real browser) but custom port blocked our header check from sandbox - verify by testing embed directly in the built app before going live
+Onda TV Canal 10,https://cableondaoriental.com/,Santo Domingo Este,regional,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+Televisión Del Este,https://televisiondeleste.com/,Punta Cana,regional,202,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+TV Exitos,https://tvexitos.net/,Santiago music video channel,entertainment,200,iframe_pending_check,https://streaming.grupomediosdelnorte.com:2020/VideoPlayer/tvexitos?autoplay=1,Iframe found via headless render (loaded successfully in real browser) but custom port blocked our header check from sandbox - verify by testing embed directly in the built app before going live
+TV Montaña,https://tvmontana.com/,Constanza,regional,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+La Prensa de Ahora TV,https://www.opencaster.com/rproductions,Bonao news/music,regional,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering
+RetroVisión TV,https://retrovisionmia.com/,Diaspora station broadcasting from Miami - relevant to your US diaspora audience,national-news,200,needs_review,,No embed pattern detected via static fetch - may require JS rendering

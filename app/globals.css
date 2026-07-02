@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-bg text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  a {
+    @apply text-cobalt underline-offset-2;
+  }
+  a:hover {
+    @apply underline;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-cobalt ring-offset-2 ring-offset-bg;
+  }
+}
