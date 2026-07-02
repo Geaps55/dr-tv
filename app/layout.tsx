@@ -36,9 +36,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           rel="stylesheet"
         />
         {adsenseId ? (
+          // beforeInteractive => rendered directly into <head> at build time,
+          // which is what AdSense's verification crawler needs to see.
           <Script
-            async
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
             crossOrigin="anonymous"
           />
