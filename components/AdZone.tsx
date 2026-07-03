@@ -8,6 +8,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 type ZoneProps = { clientId: string; slot?: string };
 
@@ -132,10 +133,14 @@ export function InFeedNativeAd({ clientId }: { clientId: string }) {
   );
 }
 
-// Zone D — mobile-only sticky anchor. Rendered from root layout.
+// Zone D — mobile-only sticky anchor. Rendered from root layout on every page,
+// but suppressed on admin routes (behavioral screens, per AdSense policy).
 export function AnchorAd({ clientId }: { clientId: string }) {
+  const pathname = usePathname();
+  const isAdmin = pathname?.startsWith("/admin") ?? false;
+
   useEffect(() => {
-    if (!clientId) return;
+    if (!clientId || isAdmin) return;
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: clientId,
@@ -145,6 +150,6 @@ export function AnchorAd({ clientId }: { clientId: string }) {
     } catch {
       /* ignore */
     }
-  }, [clientId]);
+  }, [clientId, isAdmin]);
   return null;
 }
