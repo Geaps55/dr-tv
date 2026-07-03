@@ -70,11 +70,18 @@ export default async function CategoryPage({ params }: Props) {
         <span>{cat.label}</span>
       </nav>
 
-      <section className="mb-8">
+      <section className="mb-10">
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink leading-tight">
           {cat.label}
         </h1>
         <p className="mt-3 text-lg text-muted max-w-2xl">{cat.seoDescription}</p>
+        <div className="mt-6 prose prose-neutral max-w-3xl">
+          {cat.longDescription.map((paragraph, i) => (
+            <p key={i} className="text-ink/90 leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </div>
       </section>
 
       {channels.length === 0 ? (
