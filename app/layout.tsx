@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/SiteHeader";
 import { AnchorAd } from "@/components/AdZone";
@@ -36,10 +35,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           rel="stylesheet"
         />
         {adsenseId ? (
-          // beforeInteractive => rendered directly into <head> at build time,
-          // which is what AdSense's verification crawler needs to see.
-          <Script
-            strategy="beforeInteractive"
+          // Plain <script> avoids next/script placement/strategy quirks —
+          // renders exactly here in the server HTML, which is what AdSense's
+          // verification crawler expects to find in <head>.
+          <script
+            async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
             crossOrigin="anonymous"
           />
