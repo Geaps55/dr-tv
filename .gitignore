@@ -14,5 +14,6 @@ yarn-error.log*
 .turbo
 next-env.d.ts.bak
 tsconfig.tsbuildinfo
+*.bak
 
 .vercel

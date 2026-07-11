@@ -5,6 +5,7 @@ import { CATEGORIES, type Category } from "@/lib/types";
 import { getChannelsByCategory, getSiteSettings } from "@/lib/channels";
 import { ChannelCard } from "@/components/ChannelCard";
 import { InFeedNativeAd } from "@/components/AdZone";
+import { AdsSuppressor } from "@/components/AdsSuppressor";
 import { JsonLdScript, breadcrumbJsonLd } from "@/lib/jsonld";
 
 type Props = { params: { category: string } };
@@ -43,14 +44,20 @@ export default async function CategoryPage({ params }: Props) {
   ]);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  const showFeedAd = settings.ads_zone_c_enabled && settings.adsense_client_id;
+  // Only insert in-feed ads when the category has enough real inventory to
+  // avoid AdSense "screens without publisher-content" strikes on sparse or
+  // empty categories. Threshold matches the 12-card ad cadence below.
+  const showFeedAd =
+    settings.ads_zone_c_enabled &&
+    !!settings.adsense_client_id &&
+    channels.length >= 12;
 
   // Insert an in-feed ad slot every 8 cards without cloning the grid layout —
   // we render into the same grid so the ad card stretches naturally.
   const withAds: Array<{ kind: "channel"; item: (typeof channels)[number] } | { kind: "ad"; key: string }> = [];
   channels.forEach((c, i) => {
     withAds.push({ kind: "channel", item: c });
-    if (showFeedAd && (i + 1) % 8 === 0 && i < channels.length - 1) {
+    if (showFeedAd && (i + 1) % 12 === 0 && i < channels.length - 1) {
       withAds.push({ kind: "ad", key: `ad-${i}` });
     }
   });
@@ -85,7 +92,10 @@ export default async function CategoryPage({ params }: Props) {
       </section>
 
       {channels.length === 0 ? (
-        <p className="text-muted py-12 text-center">No hay canales activos en esta categoría todavía.</p>
+        <>
+          <AdsSuppressor />
+          <p className="text-muted py-12 text-center">No hay canales activos en esta categoría todavía.</p>
+        </>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {withAds.map((entry) =>

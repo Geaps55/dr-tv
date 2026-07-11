@@ -12,6 +12,7 @@ import { Player, PlayerFallbackLink } from "@/components/Player";
 import { ChannelCard } from "@/components/ChannelCard";
 import { LiveBadge } from "@/components/LiveBadge";
 import { InArticleAd, SidebarAd } from "@/components/AdZone";
+import { AdsSuppressor } from "@/components/AdsSuppressor";
 import { JsonLdScript, channelJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 
 type Props = { params: { slug: string } };
@@ -23,12 +24,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const channel = await getChannelBySlug(params.slug);
-  if (!channel) return { title: "Canal no encontrado" };
+  if (!channel) return { title: "Canal no encontrado", robots: { index: false } };
+  // Unverified channels have skeletal content and inactive streams — keep them
+  // reachable by direct link (admin verification workflow) but out of Google's
+  // index so they don't dilute the site's quality signal or feed AdSense reviewers.
+  const isActive = channel.status === "active";
   return {
     // Bypass the layout's "%s | DR TV" template — seo_title already includes the site suffix.
     title: { absolute: channel.seo_title },
     description: channel.seo_description,
     alternates: { canonical: `/canal/${channel.slug}` },
+    robots: isActive ? undefined : { index: false, follow: true },
     openGraph: {
       title: channel.seo_title,
       description: channel.seo_description,
@@ -54,11 +60,23 @@ export default async function ChannelPage({ params }: Props) {
   ]);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  const showSidebarAd = settings.ads_zone_b_enabled && settings.adsense_client_id;
-  const showInArticleAd = settings.ads_zone_a_enabled && settings.adsense_client_id;
+  const isActive = channel.status === "active";
+  // Ads only serve on verified channels whose description is long enough to
+  // clear AdSense's "screens without publisher-content" bar. 300-char floor
+  // catches templated stubs; needs_review pages get no ads at all.
+  const hasEnoughText =
+    (channel.channel_description ?? "").trim().length >= 300;
+  const showSidebarAd =
+    isActive && settings.ads_zone_b_enabled && !!settings.adsense_client_id;
+  const showInArticleAd =
+    isActive &&
+    hasEnoughText &&
+    settings.ads_zone_a_enabled &&
+    !!settings.adsense_client_id;
 
   return (
     <>
+      {!isActive ? <AdsSuppressor /> : null}
       <JsonLdScript data={channelJsonLd(channel, siteUrl)} />
       <JsonLdScript
         data={breadcrumbJsonLd([

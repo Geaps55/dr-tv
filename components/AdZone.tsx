@@ -15,6 +15,7 @@ type ZoneProps = { clientId: string; slot?: string };
 declare global {
   interface Window {
     adsbygoogle?: unknown[];
+    __adsSuppressed?: boolean;
   }
 }
 
@@ -133,23 +134,35 @@ export function InFeedNativeAd({ clientId }: { clientId: string }) {
   );
 }
 
-// Zone D — mobile-only sticky anchor. Rendered from root layout on every page,
-// but suppressed on admin routes (behavioral screens, per AdSense policy).
-export function AnchorAd({ clientId }: { clientId: string }) {
+// Zone D — mobile-only sticky manual anchor slot. Renders a real
+// <ins class="adsbygoogle"> unit fixed to the bottom of mobile viewports,
+// respecting the AdsSuppressor kill switch and the ad-policy route filter.
+// Page-level Auto Ads is deliberately NOT used here — AdSense flagged the
+// enable_page_level_ads directive as placing ads on behavioral/no-content
+// screens. Manual slot only.
+export function AnchorAd({ clientId, slot }: { clientId: string; slot?: string }) {
   const pathname = usePathname();
   const isAdmin = pathname?.startsWith("/admin") ?? false;
+  const suppressed =
+    typeof window !== "undefined" && window.__adsSuppressed;
 
   useEffect(() => {
-    if (!clientId || isAdmin) return;
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: clientId,
-        enable_page_level_ads: true,
-        overlays: { bottom: true },
-      });
-    } catch {
-      /* ignore */
-    }
-  }, [clientId, isAdmin]);
-  return null;
+    if (!clientId || isAdmin || suppressed) return;
+    pushAd();
+  }, [clientId, isAdmin, suppressed, pathname]);
+
+  if (!clientId || isAdmin || suppressed || !slot) return null;
+
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-40 lg:hidden bg-white/95 backdrop-blur border-t border-black/10">
+      <ins
+        className="adsbygoogle block"
+        style={{ display: "block", width: "100%", height: 50 }}
+        data-ad-client={clientId}
+        data-ad-slot={slot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </div>
+  );
 }

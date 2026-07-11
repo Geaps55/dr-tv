@@ -1,4 +1,5 @@
 import { cache } from "react";
+import { unstable_noStore as noStore } from "next/cache";
 import { supabaseAnon, isSupabaseConfigured } from "./supabase";
 import type { Category, Channel, SiteSettings } from "./types";
 import { readChannelsSource } from "./csv-channels";
@@ -32,6 +33,10 @@ const DEFAULT_SETTINGS: SiteSettings = {
 // and admin, so status='needs_review' channels have a page but don't appear
 // in public grids or the sitemap.
 const getAllChannelsIncludingReview = cache(async (): Promise<Channel[]> => {
+  // Opt out of Next.js fetch cache so channel edits (admin, direct DB writes)
+  // surface without needing a redeploy. React `cache()` still dedupes within a
+  // single request.
+  noStore();
   if (!isSupabaseConfigured()) return mockChannelsFromCsv();
   const { data, error } = await supabaseAnon()
     .from("channels")
@@ -79,6 +84,7 @@ export async function getRelatedChannels(channel: Channel, limit = 6): Promise<C
 }
 
 export const getSiteSettings = cache(async (): Promise<SiteSettings> => {
+  noStore();
   if (!isSupabaseConfigured()) return DEFAULT_SETTINGS;
   const { data, error } = await supabaseAnon().from("site_settings").select("*");
   if (error) return DEFAULT_SETTINGS;

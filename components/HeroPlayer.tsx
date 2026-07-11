@@ -27,7 +27,7 @@ export function HeroPlayer({ channel }: { channel: Channel }) {
             <h2 id="hero-heading" className="font-display text-3xl leading-tight">
               {channel.name}
             </h2>
-            <p className="mt-3 text-sm text-white/70 line-clamp-4">
+            <p className="mt-3 text-sm text-white/70">
               {channel.channel_description}
             </p>
           </div>

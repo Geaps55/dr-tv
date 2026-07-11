@@ -8,6 +8,7 @@ import { FilterableGrid } from "@/components/CategoryFilter";
 import { FeaturedChannelCard } from "@/components/FeaturedChannelCard";
 import { HeroPlayer } from "@/components/HeroPlayer";
 import { InFeedNativeAd } from "@/components/AdZone";
+import { JsonLdScript, homeJsonLd } from "@/lib/jsonld";
 import type { Metadata } from "next";
 
 // The "default TV" that plays in the hero — RTVD (CERTV Canal 4), the state
@@ -23,16 +24,25 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function HomePage() {
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams?: { q?: string };
+}) {
   const [channels, featured, settings, hero] = await Promise.all([
     getAllChannels(),
     getFeaturedChannels(),
     getSiteSettings(),
     getChannelBySlug(HERO_CHANNEL_SLUG),
   ]);
+  const initialQuery = searchParams?.q ?? "";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
   return (
     <>
+      <JsonLdScript
+        data={homeJsonLd(siteUrl, settings.site_title, settings.default_seo_description)}
+      />
       <section className="mb-8">
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink leading-tight">
           {settings.site_title}
@@ -40,9 +50,7 @@ export default async function HomePage() {
         <p className="mt-3 text-lg text-muted max-w-2xl">{settings.site_tagline}</p>
       </section>
 
-      {hero && <HeroPlayer channel={hero} />}
-
-      <section className="my-12 prose prose-neutral max-w-3xl" aria-labelledby="intro-heading">
+      <section className="mb-12 prose prose-neutral max-w-3xl" aria-labelledby="intro-heading">
         <h2 id="intro-heading" className="font-display text-2xl text-ink">
           Televisión dominicana en vivo, en un solo lugar
         </h2>
@@ -65,6 +73,8 @@ export default async function HomePage() {
           superior, o usar el buscador para saltar directo al que quieres ver.
         </p>
       </section>
+
+      {hero && <HeroPlayer channel={hero} />}
 
       {featured.length > 0 && (
         <section className="mb-14" aria-labelledby="featured-heading">
@@ -99,7 +109,7 @@ export default async function HomePage() {
           en DR TV. Usa el buscador o filtra por categoría para encontrar el
           que buscas.
         </p>
-        <FilterableGrid channels={channels} />
+        <FilterableGrid channels={channels} initialQuery={initialQuery} />
         {settings.ads_zone_c_enabled && settings.adsense_client_id ? (
           <div className="mt-8">
             <InFeedNativeAd clientId={settings.adsense_client_id} />

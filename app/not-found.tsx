@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CATEGORIES } from "@/lib/types";
+import { AdsSuppressor } from "@/components/AdsSuppressor";
 
 export const metadata = {
   title: { absolute: "Página no encontrada — DR TV" },
@@ -11,6 +12,7 @@ export const metadata = {
 export default function NotFound() {
   return (
     <article className="max-w-3xl mx-auto py-8">
+      <AdsSuppressor />
       <p className="text-sm uppercase tracking-wider text-cobalt mb-2">Error 404</p>
       <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink leading-tight">
         No encontramos esa página
